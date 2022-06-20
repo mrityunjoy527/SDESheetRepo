@@ -6,10 +6,12 @@ import java.util.Set;
 
 public class RemoveDuplicates {
     static int removeDuplicates(ArrayList<Integer> arr, int n) {
-        Set<Integer> set = new HashSet<>();
-        for(int i: arr) {
-            set.add(i);
+        int i = 0, j = 1;
+        for(j=1; j<n; j++) {
+            if(arr.get(i) != arr.get(j)) {
+                arr.set(++i, arr.get(j));
+            }
         }
-        return set.size();
+        return i+1;
     }
 }
