@@ -1,6 +1,6 @@
 package sdeSheetQues;
 
-import java.util.*;
+import java.util.Stack;
 
 public class NextGreater {
     static int[] nextGreater(int[] arr, int n) {
